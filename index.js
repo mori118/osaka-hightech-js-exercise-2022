@@ -5,10 +5,13 @@ for (let n = 1; n <= 16; n = n + 1) {
     piece.style.order = parseInt(Math.random() * 16) + 1;
   }
   
-  function pieceClickHandler() {
+function pieceClickHandler() {
     console.log('ピースがクリックされました');
+    console.log(evevt.target);
   }
   
-  const piece01 = document.querySelector('.pos-1');
+for (let n = 1; n <= 15; n = n + 1) {
+    const piece = document.querySelector('.pos-' + n);
   
-  piece01.addEventListener('click', pieceClickHandler);
+  piece.addEventListener('click', pieceClickHandler);
+}
